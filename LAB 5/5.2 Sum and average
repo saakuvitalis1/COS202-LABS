@@ -1,1 +1,26 @@
+let count = 0;
+let sum = 0;
+let highest = -Infinity;
+let lowest = Infinity;
 
+let mark = Number(prompt("Enter mark (-1 to stop):"));
+
+while (mark !== -1) {
+    count++;
+    sum += mark;
+
+    if (mark > highest) highest = mark;
+    if (mark < lowest) lowest = mark;
+
+    mark = Number(prompt("Enter mark (-1 to stop):"));
+}
+
+if (count > 0) {
+    console.log("Count:", count);
+    console.log("Sum:", sum);
+    console.log("Average:", sum / count);
+    console.log("Highest:", highest);
+    console.log("Lowest:", lowest);
+} else {
+    console.log("No marks entered");
+}
