@@ -1,1 +1,24 @@
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        double total = 0;
+
+        for (int i = 1; i <= 3; i++) {
+            System.out.print("Enter item name: ");
+            String item = input.nextLine();
+
+            System.out.print("Enter price: ");
+            double price = input.nextDouble();
+            input.nextLine();
+
+            total += price;
+
+            System.out.printf("%-15s %10.2f%n", item, price);
+        }
+
+        System.out.printf("Total:           %10.2f%n", total);
+    }
+}
