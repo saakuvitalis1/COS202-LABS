@@ -1,1 +1,29 @@
+public class Task63 {
 
+    static class Student {
+        private double score;
+
+        public void setScore(double score) {
+            if (score < 0) {
+                System.out.println("Invalid score! Negative values are not allowed.");
+            } else {
+                this.score = score;
+            }
+        }
+
+        public double getScore() {
+            return score;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        s.setScore(75);
+        System.out.println("Score: " + s.getScore());
+
+        s.setScore(-10);
+        System.out.println("Score after invalid input: " + s.getScore());
+    }
+}
