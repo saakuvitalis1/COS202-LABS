@@ -1,1 +1,12 @@
+public class Main {
+    public static void main(String[] args) {
 
+        System.out.println("DAY\t\tSUBJECT");
+        System.out.println("Monday\t\tJava");
+        System.out.println("Tuesday\t\tMathematics");
+        System.out.println("Wednesday\tProgramming");
+        System.out.println("Thursday\tDatabase");
+        System.out.println("Friday\t\tNetworking");
+
+    }
+}
