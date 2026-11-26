@@ -1,1 +1,35 @@
+public class Task62 {
 
+    static class Student {
+        String name;
+        String matricNumber;
+        int age;
+
+        Student(String name, String matricNumber, int age) {
+            this.name = name;
+            this.matricNumber = matricNumber;
+            this.age = age;
+        }
+
+        public String toString() {
+            return "Name: " + name +
+                   ", Matric Number: " + matricNumber +
+                   ", Age: " + age;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student("John", "CSC001", 20);
+        Student s2 = new Student("Peter", "CSC002", 21);
+        Student s3 = new Student("Mary", "CSC003", 19);
+        Student s4 = new Student("David", "CSC004", 22);
+        Student s5 = new Student("James", "CSC005", 20);
+
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+        System.out.println(s4);
+        System.out.println(s5);
+    }
+}
