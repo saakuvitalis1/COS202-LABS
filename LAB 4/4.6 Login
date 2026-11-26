@@ -1,1 +1,12 @@
+let username = "admin";
+let password = "12345";
 
+let user = prompt("Enter username:");
+let pass = prompt("Enter password:");
+
+if (user === username && pass === password) {
+    console.log("Access granted");
+}
+else {
+    console.log("Access denied");
+}
