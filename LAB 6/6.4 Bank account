@@ -1,1 +1,50 @@
+public class Task64 {
 
+    static class BankAccount {
+        private double balance;
+
+        public BankAccount(double balance) {
+            this.balance = balance;
+        }
+
+        public void deposit(double amount) {
+            if (amount > 0) {
+                balance += amount;
+            } else {
+                System.out.println("Invalid deposit amount.");
+            }
+        }
+
+        public void withdraw(double amount) {
+            if (amount > 0 && amount <= balance) {
+                balance -= amount;
+            } else {
+                System.out.println("Insufficient balance or invalid amount.");
+            }
+        }
+
+        public void display() {
+            System.out.println("Account Balance: " + balance);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        BankAccount account = new BankAccount(1000);
+
+        System.out.println("Initial Account:");
+        account.display();
+
+        account.deposit(500);
+        System.out.println("After Deposit:");
+        account.display();
+
+        account.withdraw(300);
+        System.out.println("After Withdrawal:");
+        account.display();
+
+        account.withdraw(2000);
+        System.out.println("After Overdraft Attempt:");
+        account.display();
+    }
+}
