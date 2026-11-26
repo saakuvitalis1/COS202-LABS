@@ -1,1 +1,33 @@
+public class Task76 {
 
+    public static int sum(int n) {
+        if (n == 0) {
+            return 0;
+        }
+
+        return n + sum(n - 1);
+    }
+
+    public static int power(int base, int exponent) {
+        if (exponent == 0) {
+            return 1;
+        }
+
+        return base * power(base, exponent - 1);
+    }
+
+    public static String reverse(String text) {
+        if (text.isEmpty()) {
+            return text;
+        }
+
+        return reverse(text.substring(1)) + text.charAt(0);
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("Sum: " + sum(5));
+        System.out.println("Power: " + power(2, 3));
+        System.out.println("Reverse: " + reverse("JAVA"));
+    }
+}
