@@ -1,1 +1,21 @@
+public class Task71 {
 
+    public static int cube(int n) {
+        return n * n * n;
+    }
+
+    public static boolean isOdd(int n) {
+        return n % 2 != 0;
+    }
+
+    public static int maxOfThree(int a, int b, int c) {
+        return Math.max(a, Math.max(b, c));
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("Cube: " + cube(3));
+        System.out.println("Is Odd: " + isOdd(7));
+        System.out.println("Maximum: " + maxOfThree(10, 25, 15));
+    }
+}
