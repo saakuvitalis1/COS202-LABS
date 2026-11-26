@@ -1,1 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
 
+        int a = Integer.MAX_VALUE;
+        System.out.println(a + 1);
+
+        long b = (long) Integer.MAX_VALUE + 1;
+        System.out.println(b);
+    }
+}
