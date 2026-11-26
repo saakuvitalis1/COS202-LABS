@@ -1,1 +1,64 @@
+class MathUtil {
 
+    public static boolean isPrime(int n) {
+        if (n <= 1) return false;
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static long factorial(int n) {
+        long result = 1;
+
+        for (int i = 1; i <= n; i++) {
+            result *= i;
+        }
+
+        return result;
+    }
+
+    public static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        return Math.abs(a);
+    }
+
+    public static double power(double base, int exponent) {
+        return Math.pow(base, exponent);
+    }
+}
+
+public class Task75 {
+
+    public static void main(String[] args) {
+
+        System.out.println("Prime 7: " + MathUtil.isPrime(7));
+        System.out.println("Prime 11: " + MathUtil.isPrime(11));
+        System.out.println("Prime 15: " + MathUtil.isPrime(15));
+        System.out.println("Prime 20: " + MathUtil.isPrime(20));
+
+        System.out.println("Factorial 3: " + MathUtil.factorial(3));
+        System.out.println("Factorial 4: " + MathUtil.factorial(4));
+        System.out.println("Factorial 5: " + MathUtil.factorial(5));
+        System.out.println("Factorial 6: " + MathUtil.factorial(6));
+
+        System.out.println("GCD 12, 8: " + MathUtil.gcd(12, 8));
+        System.out.println("GCD 15, 5: " + MathUtil.gcd(15, 5));
+        System.out.println("GCD 20, 10: " + MathUtil.gcd(20, 10));
+        System.out.println("GCD 18, 12: " + MathUtil.gcd(18, 12));
+
+        System.out.println("Power 2^3: " + MathUtil.power(2, 3));
+        System.out.println("Power 3^2: " + MathUtil.power(3, 2));
+        System.out.println("Power 4^2: " + MathUtil.power(4, 2));
+        System.out.println("Power 5^3: " + MathUtil.power(5, 3));
+    }
+}
