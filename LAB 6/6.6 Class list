@@ -1,1 +1,47 @@
+public class Task66 {
 
+    static class Student {
+        String name;
+        double score;
+
+        Student(String name, double score) {
+            this.name = name;
+            this.score = score;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Student[] students = {
+            new Student("John", 75),
+            new Student("Peter", 80),
+            new Student("Mary", 90),
+            new Student("David", 65),
+            new Student("James", 85),
+            new Student("Paul", 70),
+            new Student("Grace", 95),
+            new Student("Ruth", 60),
+            new Student("Daniel", 88),
+            new Student("Esther", 78)
+        };
+
+        double total = 0;
+        Student highest = students[0];
+
+        for (Student s : students) {
+            total += s.score;
+
+            if (s.score > highest.score) {
+                highest = s;
+            }
+        }
+
+        double average = total / students.length;
+
+        System.out.println("Student with Highest Score:");
+        System.out.println("Name: " + highest.name);
+        System.out.println("Score: " + highest.score);
+
+        System.out.println("Class Average: " + average);
+    }
+}
