@@ -1,1 +1,15 @@
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first name: ");
+        String first = input.nextLine();
+
+        System.out.print("Enter last name: ");
+        String last = input.nextLine();
+
+        System.out.println("Welcome, " + last + ", " + first);
+    }
+}
