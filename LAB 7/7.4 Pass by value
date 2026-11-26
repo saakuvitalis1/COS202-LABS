@@ -1,1 +1,29 @@
+public class Task74 {
 
+    public static void swap(int a, int b) {
+
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("Inside method:");
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+    }
+
+    public static void main(String[] args) {
+
+        int x = 10;
+        int y = 20;
+
+        System.out.println("Before swapping:");
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+
+        swap(x, y);
+
+        System.out.println("After calling method:");
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+    }
+}
