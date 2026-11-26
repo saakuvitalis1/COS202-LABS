@@ -1,1 +1,47 @@
+public class Task67 {
 
+    static class Book {
+        String title;
+        String author;
+        String ISBN;
+        boolean availability;
+
+        Book(String title, String author, String ISBN, boolean availability) {
+            this.title = title;
+            this.author = author;
+            this.ISBN = ISBN;
+            this.availability = availability;
+        }
+
+        public void displayBook() {
+            System.out.println("Title: " + title);
+            System.out.println("Author: " + author);
+            System.out.println("ISBN: " + ISBN);
+            System.out.println("Availability: " +
+                    (availability ? "Available" : "Not Available"));
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Book book1 = new Book(
+            "Things Fall Apart",
+            "Chinua Achebe",
+            "9780385474542",
+            true
+        );
+
+        Book book2 = new Book(
+            "The River Between",
+            "Ngugi wa Thiong'o",
+            "9780435905484",
+            false
+        );
+
+        System.out.println("Book 1 Details:");
+        book1.displayBook();
+
+        System.out.println("\nBook 2 Details:");
+        book2.displayBook();
+    }
+}
