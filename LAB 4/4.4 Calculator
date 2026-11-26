@@ -1,1 +1,28 @@
+let a = Number(prompt("Enter first number:"));
+let b = Number(prompt("Enter second number:"));
+let op = prompt("Enter operator (+, -, *, /):");
 
+switch (op) {
+    case "+":
+        console.log(a + b);
+        break;
+
+    case "-":
+        console.log(a - b);
+        break;
+
+    case "*":
+        console.log(a * b);
+        break;
+
+    case "/":
+        if (b === 0) {
+            console.log("Error: Division by zero");
+        } else {
+            console.log(a / b);
+        }
+        break;
+
+    default:
+        console.log("Unknown operator");
+}
