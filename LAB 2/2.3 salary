@@ -1,1 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
 
+        double grossSalary = 50000;
+        double taxRate = 0.10;
+        double deduction = 2000;
+
+        double tax = grossSalary * taxRate;
+        double netSalary = grossSalary - tax - deduction;
+
+        System.out.println("Net Salary: " +
+            String.format("%.2f", netSalary));
+    }
+}
