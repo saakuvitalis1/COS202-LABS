@@ -1,1 +1,24 @@
+public class Task65 {
 
+    static class Student {
+
+        String name;
+        static int count = 0;
+
+        Student(String name) {
+            this.name = name;
+            count++;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student("John");
+        Student s2 = new Student("Peter");
+        Student s3 = new Student("Mary");
+        Student s4 = new Student("David");
+        Student s5 = new Student("James");
+
+        System.out.println("Total Students Created: " + Student.count);
+    }
+}
