@@ -1,1 +1,10 @@
+public class Main {
+    public static void main(String[] args) {
 
+        System.out.println("Name: SAAKU TERYIMA VITALIS");
+        System.out.println("Matric Number: EDU/LIS/24/012");
+        System.out.println("Department: Library and Information Science");
+        System.out.println("Favourite Quote: Never Give Up");
+
+    }
+}
