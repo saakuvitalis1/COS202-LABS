@@ -1,1 +1,21 @@
+public class Task73 {
 
+    public static double area(double side) {
+        return side * side;
+    }
+
+    public static double area(double length, double width) {
+        return length * width;
+    }
+
+    public static double area(int radius) {
+        return Math.PI * radius * radius;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println("Area of Square: " + area(5.0));
+        System.out.println("Area of Rectangle: " + area(5.0, 4.0));
+        System.out.println("Area of Circle: " + area(7));
+    }
+}
