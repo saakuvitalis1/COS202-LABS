@@ -1,1 +1,28 @@
+import java.util.Scanner;
 
+public class Task94 {
+
+    public static boolean isPalindrome(String text) {
+        String clean = text.replaceAll("[^a-zA-Z0-9]", "")
+                           .toLowerCase();
+
+        String reverse = new StringBuilder(clean).reverse().toString();
+
+        return clean.equals(reverse);
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a sentence: ");
+        String text = input.nextLine();
+
+        if (isPalindrome(text)) {
+            System.out.println("It is a palindrome.");
+        } else {
+            System.out.println("It is not a palindrome.");
+        }
+
+        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
+    }
+}
