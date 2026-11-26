@@ -1,1 +1,50 @@
+import java.util.Scanner;
 
+public class Task88 {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int[][] marks = new int[5][4];
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Enter marks for Student " + (i + 1));
+
+            for (int j = 0; j < 4; j++) {
+                System.out.print("Course " + (j + 1) + ": ");
+                marks[i][j] = input.nextInt();
+            }
+        }
+
+        System.out.println("\nStudent Results:");
+
+        for (int i = 0; i < 5; i++) {
+            int total = 0;
+
+            for (int j = 0; j < 4; j++) {
+                total += marks[i][j];
+            }
+
+            double average = total / 4.0;
+
+            System.out.println("Student " + (i + 1));
+            System.out.println("Total: " + total);
+            System.out.println("Average: " + average);
+        }
+
+        System.out.println("\nCourse Averages:");
+
+        for (int j = 0; j < 4; j++) {
+            int total = 0;
+
+            for (int i = 0; i < 5; i++) {
+                total += marks[i][j];
+            }
+
+            double average = total / 5.0;
+
+            System.out.println("Course " + (j + 1) +
+                               " Average: " + average);
+        }
+    }
+}
