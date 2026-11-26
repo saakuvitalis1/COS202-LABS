@@ -1,1 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
 
+        double C = 36.6;
+        double F = C * 9.0 / 5 + 32;
+
+        System.out.println("Fahrenheit: " + F);
+
+        // Integer division comparison
+        double result = C * 9 / 5 + 32;
+        System.out.println("Using 9/5: " + result);
+    }
+}
