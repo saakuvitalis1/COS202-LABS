@@ -1,1 +1,19 @@
+import java.util.Scanner;
 
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a three-digit number: ");
+        int num = input.nextInt();
+
+        int a = num / 100;
+        int b = (num / 10) % 10;
+        int c = num % 10;
+
+        int sum = a + b + c;
+
+        System.out.println("Sum of digits: " + sum);
+    }
+}
