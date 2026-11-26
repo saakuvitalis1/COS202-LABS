@@ -1,1 +1,33 @@
+import java.util.Scanner;
 
+public class Task96 {
+
+    public static boolean isValidEmail(String email) {
+        if (email.contains(" ")) {
+            return false;
+        }
+
+        int at = email.indexOf('@');
+
+        if (at == -1 || at != email.lastIndexOf('@')) {
+            return false;
+        }
+
+        int dot = email.indexOf('.', at);
+
+        return dot > at + 1 && dot < email.length() - 1;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter email address: ");
+        String email = input.nextLine();
+
+        if (isValidEmail(email)) {
+            System.out.println("Valid email address.");
+        } else {
+            System.out.println("Invalid email address.");
+        }
+    }
+}
